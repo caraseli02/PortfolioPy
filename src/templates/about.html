@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <body>
+    <!-- Header-->
+    {% block header %}
+
+        <header>
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+
+            <nav class="menu">
+                <div class="menu-branding">
+                    <div class="portrait"></div>
+                </div>
+                <ul class="menu-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item current">
+                        <a href="#" class="nav-link">
+                            About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/work" class="nav-link">
+                            My Work
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">
+                            How To Reach Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    {% endblock %}
+    <!-- MAIN BLOCK -->
+    {% block main %}
+    <main id="about">
+        <h1 class="lg-heading">
+            About
+            <span class="text-secondary">Me</span>
+        </h1>
+        <h2 class="sm-heading">
+            Let me tell you a few things about me and my studies...
+        </h2>
+        <div class="about-info">
+        <img src="{{ url_for('static', filename = 'img/portrait.jpg') }}" alt="John " class="bio-image">
+
+            <div class="bio">
+                <h3 class="text-secondary">BIO</h3>
+                <p>I live and work in Mallorca.
+                    I am a punctual and responsible person with a lot of desire to learn abaut the latest technologies.
+                    Since I was little I like the world of technologies.
+                    I like to solve problems and that's why I was so passionate about programming</p>
+            </div>
+
+            <div class="study study-1">
+                <h3>Curso Ibecon</h3>
+                <h6>CONSTRUCCION DE PAGINAS WEB</h6>
+                <p>HTML , CSS , SASS , JAVASCRIPT.</p>
+            </div>
+
+            <div class="study study-2">
+                <h3>Curso Ibecon</h3>
+                <h6>DESARROLLO DE APLICACIONES CON TECNOLOGIA WEB</h6>
+                <p>HTML , SASS , PYTHON , FLASK , DOCKER</p>
+            </div>
+
+        </div>
+    </main>
+    {% endblock %}
+    {#  Footer #}
+    {% block footer %} {% endblock %}
+
+    <script src="js/main.js"></script>
+    </body>
+{% endblock %}

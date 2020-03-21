@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div id="bg-img">
+        {% block header %}
+            <header>
+                <div class="menu-btn">
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                </div>
+
+                <nav class="menu">
+                    <ul class="menu-nav">
+                        <li class="nav-item current">
+                            <a href="#" class="nav-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">
+                                About Me
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/work" class="nav-link">
+                                My Work
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">
+                                How To Reach Me
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="menu-branding">
+                        <div class="portrait"></div>
+                    </div>
+                </nav>
+            </header>
+        {% endblock %}
+        {% block main %}
+            <main id="home">
+                <article class="home__txt">
+                    <h1 class="lg-heading text-secondary">
+                        Vlad
+                    </h1>
+                    <h2 class="sm-heading">
+                        Web Developer, Programmer, Designer
+                    </h2>
+                    <div class="icons">
+                        <a href="#!">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="#!">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="#!">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="home__img">
+
+                    {#<picture class="quienSoy__img1">
+                        <!-- Por defecto, baja resolución de imagen para Smartphone -->
+                        <source srcset="{{ url_for('static', filename = 'img/baground/baground_200.jpg') }} 1x,{{ url_for('static', filename = 'img/baground/baground_575.jpg') }} 2x"
+                                media="(min-width:0px) and (max-width:767px)">
+
+                        <!-- Media resolución para Tablets -->
+                        <source srcset="{{ url_for('static', filename = 'img/baground/baground_709.jpg') }} 1x,{{ url_for('static', filename = 'img/baground/baground_959.jpg') }} 2x"
+                                media='(min-width:768px) and (max-width:1199px)'>
+
+
+                        <img src="{{ url_for('static', filename = 'img/baground/baground_1400.jpg') }}" alt="Code">
+                    </picture>#}
+
+                </article>
+            </main>
+        {% endblock %}
+        {% block footer %}{% endblock %}
+    </div>
+{% endblock %}
